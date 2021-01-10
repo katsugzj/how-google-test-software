@@ -1,0 +1,14 @@
+message AddUrlRequest {
+    required string url = 1;
+    optional string comment = 2;
+}
+
+message AddUrlReply {
+    optional int32 error_code = 1;
+    optional string error_code_details = 2;
+}
+
+service AddUrlService{
+    rpc AddUrl(AddUrlRequest) returns(AddUrlReply){
+    }
+}
